@@ -8,6 +8,7 @@
                    com.bhauman/figwheel-main {:mvn/version "0.2.3"}
                    binaryage/devtools {:mvn/version "1.0.0"}
                    devcards {:mvn/version "0.2.6"}
+                   kamera {:mvn/version "0.1.2-SNAPSHOT"}
                    day8.re-frame/test {:mvn/version "0.1.5"}
                    org.clojure/test.check {:mvn/version "0.10.0"}
                    org.clojure/spec.alpha {:mvn/version "0.2.187"}}
