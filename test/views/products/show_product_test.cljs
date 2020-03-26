@@ -2,7 +2,7 @@
   (:require [views.products.show-product :refer [show-product-component]]
             [specs.products.show-product :as spec]
             [clojure.spec.alpha :as s]
-            [clojure.spec.gen.alpha :as gen]
+            [clojure.test.check.generators :as gen]
             [devcards.core :refer-macros [defcard-rg]]))
 
 (defn- show-product* [m]
@@ -25,3 +25,6 @@
                      [:pre (pr-str m)]
                      [show-product* m]])
                   models)]))
+
+(s/def ::name string?)
+(gen/sample (s/gen ::spec/component))
