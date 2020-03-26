@@ -3,5 +3,5 @@
             [clojure.spec.alpha :as s]
             [re-frame.core :as re-frame]))
 
-
+(defn show-product-component [model])
 
