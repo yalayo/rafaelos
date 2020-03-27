@@ -15,7 +15,7 @@
 (defcard-rg show-product
   [:div
    [:h1 [:i "Initial state"]]
-   [show-product* {}]])
+   [show-product* {:product {:name "Product", :image "image.png"}}]])
 
 (defcard-rg generated-show-product
   (let [models (gen/sample (s/gen ::spec/component))]
@@ -25,6 +25,3 @@
                      [:pre (pr-str m)]
                      [show-product* m]])
                   models)]))
-
-(s/def ::name string?)
-(gen/sample (s/gen ::spec/component))
